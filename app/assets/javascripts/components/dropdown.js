@@ -5,6 +5,8 @@
 const revealDropdown = (event) => {
   event.stopPropagation(); // prevent event from being picked up by body
 	$('#gear-dropdown').removeClass('hidden');
+  $('#gear').addClass('rotated');
+  $('#gear').removeClass('unrotated');
   $('#gear-dropdown-btn').off('click', revealDropdown);
   $(document).on('click', hideDropdown);
 };
@@ -12,6 +14,8 @@ const revealDropdown = (event) => {
 // add "hidden" class to dropdown and update event listeners
 const hideDropdown = () => {
 	$('#gear-dropdown').addClass('hidden');
+  $('#gear').removeClass('rotated');
+  $('#gear').addClass('unrotated');
   $('#gear-dropdown-btn').on('click', revealDropdown);
   $(document).off('click', hideDropdown);
 };

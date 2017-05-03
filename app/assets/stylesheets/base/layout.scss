@@ -31,6 +31,19 @@ button:hover {
 	border-color: $darkest-blue;
 }
 
+.hidden {
+	display: none;
+}
+
+.rotated {
+	transform: rotate(45deg);
+	transition: transform 0.5s;
+}
+.unrotated {
+	transform: rotate(-45deg);
+	transition: transform 0.5s;
+}
+
 /*
 	Header Rules
 */
